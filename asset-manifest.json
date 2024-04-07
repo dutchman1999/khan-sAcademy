@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/khan-sAcademy/static/css/main.cbc512fe.css",
+    "main.js": "/khan-sAcademy/static/js/main.6d74a99c.js",
+    "static/js/453.119be5ab.chunk.js": "/khan-sAcademy/static/js/453.119be5ab.chunk.js",
+    "index.html": "/khan-sAcademy/index.html",
+    "main.cbc512fe.css.map": "/khan-sAcademy/static/css/main.cbc512fe.css.map",
+    "main.6d74a99c.js.map": "/khan-sAcademy/static/js/main.6d74a99c.js.map",
+    "453.119be5ab.chunk.js.map": "/khan-sAcademy/static/js/453.119be5ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cbc512fe.css",
+    "static/js/main.6d74a99c.js"
+  ]
+}
