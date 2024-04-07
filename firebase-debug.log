@@ -1,0 +1,89 @@
+[debug] [2024-04-07T06:28:49.223Z] ----------------------------------------------------------------------
+[debug] [2024-04-07T06:28:49.224Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2024-04-07T06:28:49.224Z] CLI Version:   13.7.1
+[debug] [2024-04-07T06:28:49.224Z] Platform:      darwin
+[debug] [2024-04-07T06:28:49.224Z] Node Version:  v18.16.1
+[debug] [2024-04-07T06:28:49.225Z] Time:          Sun Apr 07 2024 11:58:49 GMT+0530 (India Standard Time)
+[debug] [2024-04-07T06:28:49.225Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-07T06:28:49.228Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-07T06:28:49.229Z] > authorizing via signed-in user (khanvirus125@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/myproject/Downloads/CourseAPP/course
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-04-07T06:30:43.853Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-04-07T06:30:43.853Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"mynewcourse","name":"mynewcourse"}
+[debug] [2024-04-07T06:30:45.939Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2024-04-07T06:30:45.939Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.5194272553465427156"}
+[debug] [2024-04-07T06:30:45.941Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 [none]
+[debug] [2024-04-07T06:30:47.970Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 200
+[debug] [2024-04-07T06:30:47.971Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 {"name":"operations/cp.5194272553465427156","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true}}
+[debug] [2024-04-07T06:30:48.473Z] [Project Creation Poller] Retrying task index 0
+[debug] [2024-04-07T06:30:48.474Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 [none]
+[debug] [2024-04-07T06:30:50.623Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 200
+[debug] [2024-04-07T06:30:50.624Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.5194272553465427156 {"name":"operations/cp.5194272553465427156","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"526360779777","projectId":"mynewcourse","lifecycleState":"ACTIVE","name":"mynewcourse","createTime":"2024-04-07T06:30:47.402450Z"}}
+[debug] [2024-04-07T06:30:50.627Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/mynewcourse:addFirebase [none]
+[debug] [2024-04-07T06:30:52.382Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/mynewcourse:addFirebase 403
+[debug] [2024-04-07T06:30:52.382Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/mynewcourse:addFirebase {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-04-07T06:30:52.383Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-04-07T06:30:52.735Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:299:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to add Firebase to Google Cloud Platform project. See firebase-debug.log for more info.
+[debug] [2024-04-07T06:31:41.083Z] ----------------------------------------------------------------------
+[debug] [2024-04-07T06:31:41.084Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2024-04-07T06:31:41.084Z] CLI Version:   13.7.1
+[debug] [2024-04-07T06:31:41.084Z] Platform:      darwin
+[debug] [2024-04-07T06:31:41.084Z] Node Version:  v18.16.1
+[debug] [2024-04-07T06:31:41.085Z] Time:          Sun Apr 07 2024 12:01:41 GMT+0530 (India Standard Time)
+[debug] [2024-04-07T06:31:41.085Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-07T06:31:41.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-07T06:31:41.088Z] > authorizing via signed-in user (khanvirus125@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/myproject/Downloads/CourseAPP/course
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-04-07T06:31:58.776Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-04-07T06:31:58.776Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"sarif","name":"sarif"}
+[debug] [2024-04-07T06:32:00.465Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-04-07T06:32:00.465Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id must be at least 6 characters long]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-04-07T06:32:00.866Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id must be at least 6 characters long]
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:299:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
